@@ -22,7 +22,7 @@ def analyze_flag_file():
         print(f"실제 파일 hex: {actual_data.hex()}")
         
         if actual_data.hex() == previous_hex:
-            print("완전 일치! 이전 분석이 정확함")
+            print("일치. 이전 분석 정확")
             return True
         elif actual_data.hex().startswith(previous_hex[:32]):  # 처음 16바이트만 비교
             print("부분 일치 (처음 부분)")
@@ -37,3 +37,4 @@ def analyze_flag_file():
 
 if __name__ == "__main__":
     analyze_flag_file()
+
